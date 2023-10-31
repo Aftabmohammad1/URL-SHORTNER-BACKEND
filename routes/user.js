@@ -10,7 +10,7 @@ router.post('/signup', async (req, res) => {
   const isUserExist = await getUserByName(username)
 
   //validate username
-  if (isUserExist) {
+  if (isUserExist) { 
     res.status(400).send({ error: "Username already exists" })
     return
   }
